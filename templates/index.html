@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<div class="jumbotron">
+    <h1 class="display-4">Добро пожаловать на мой сайт!</h1>
+    <p class="lead">Это простой сайт-визитка с минималистичным дизайном в темных тонах.</p>
+    <hr class="my-4">
+    <p>*Тут должна находиться краткая инфа о команде.*</p>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <a href="{{ url_for('page1') }}" class="btn btn-primary btn-block">Afterglow: Remastered</a>
+        </div>
+        <div class="col-md-4">
+            <a href="{{ url_for('page2') }}" class="btn btn-primary btn-block">Afterglow 2: Empty Borders</a>
+        </div>
+        <div class="col-md-4">
+            <a href="{{ url_for('page3') }}" class="btn btn-primary btn-block">Afterglow: Legacy</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
