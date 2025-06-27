@@ -30,24 +30,32 @@
 {% block title %}{% if title %}{{ title }}{% else %}Afterglow{% endif %}{% endblock %}
 
 {% block navbar %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-        <a class="navbar-brand" href="{{ url_for('index') }}">Poslesvet Studio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('page1') }}">Afterglow: Remastered</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('page2') }}">Afterglow 2: Empty Borders</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('page3') }}">Afterglow: Legacy</a>
-                </li>
-            </ul>
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between w-100 align-items-center">
+            <!-- Логотип и название студии слева -->
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand me-3" href="{{ url_for('index') }}">Poslesvet Studio</a>
+                <img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Logo" style="height: 30px;">
+            </div>
+            
+            <!-- Центральная часть с кнопками -->
+            <div class="d-flex justify-content-center" style="margin-left: 10%; transform: translateX(30px);">
+                <ul class="navbar-nav">
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="{{ url_for('page1') }}">Afterglow: Remastered</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="{{ url_for('page2') }}">Afterglow 2: Empty Borders</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="{{ url_for('page3') }}">Afterglow: Legacy</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Правый блок (уменьшенный) -->
+            <div class="flex-grow-0" style="width: 15%;"></div>
         </div>
     </div>
 </nav>
