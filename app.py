@@ -34,6 +34,11 @@ def page3():
                          content1="ДИСКЛЕЙМЕР: Все действия мода разворачиваются в выдуманной вселенной, все персонажи достигли возраста 18 лет, все совпадения случайны. ", 
                          content2="ПРОСИМ ВАС СНАЧАЛА ЗАХОДИТЬ В НАШ МОД, А ПОТОМ ЗАГРУЖАТЬ СОХРАНЕНИЯ, БЕЗ ЭТОГО КАРТА РАБОТАТЬ НЕ БУДЕТ!",
                          image_url="images/page3.jpg"), 200
+@app.route('/guide')
+def guide():
+    return render_template('guide.html',
+                           title="Installation guide",
+                           )
 
 if __name__ == '__main__':
     app.run(debug=True)
