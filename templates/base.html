@@ -2,6 +2,7 @@
 {% block styles %}
 {{ super() }}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 <style>
     body {
         padding-top: 20px;
@@ -22,10 +23,36 @@
         margin-bottom: 20px;
         border-radius: 4px;
     }
+    .footer {
+        background-color: #2c3e50;
+        padding: 20px 0;
+        margin-top: 30px;
+        border-radius: 6px;
+    }
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .footer-left, .footer-right {
+        display: flex;
+        gap: 20px;
+    }
+    .footer-link {
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    .footer-link:hover {
+        color: #1abc9c;
+    }
+    .footer-icon {
+        margin-right: 5px;
+    }
 </style>
 {% endblock %}
-
-
 
 {% block title %}{% if title %}{{ title }}{% else %}Afterglow{% endif %}{% endblock %}
 
@@ -75,4 +102,30 @@
 <div class="container">
     {% block app_content %}{% endblock %}
 </div>
+
+<!-- Подвал сайта -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-links">
+            <!-- Левая часть с Steam и Telegram -->
+            <div class="footer-left">
+                <a href="https://store.steampowered.com/" class="footer-link" target="_blank"> <!-- Вставьте ссылку на Steam -->
+                    <i class="bi bi-steam footer-icon"></i>
+                    Стим
+                </a>
+                <a href="https://t.me/poslesvetstudio" class="footer-link" target="_blank"> <!-- Вставьте ссылку на Telegram -->
+                    <i class="bi bi-telegram footer-icon"></i>
+                    Telegram
+                </a>
+            </div>
+            
+            <!-- Правая часть с Afterglow проектами -->
+            <div class="footer-right">
+                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2787528946" class="footer-link">Afterglow:Remastered</a>
+                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2897115499" class="footer-link">Afterglow2</a>
+                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3330744535" class="footer-link">Afterglow:Legacy</a>
+            </div>
+        </div>
+    </div>
+</footer>
 {% endblock %}

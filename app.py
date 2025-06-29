@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from flask_bootstrap import Bootstrap  # Изменили импорт
+from flask_bootstrap import Bootstrap  
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)  
@@ -34,6 +34,7 @@ def page3():
                          content1="ДИСКЛЕЙМЕР: Все действия мода разворачиваются в выдуманной вселенной, все персонажи достигли возраста 18 лет, все совпадения случайны. ", 
                          content2="ПРОСИМ ВАС СНАЧАЛА ЗАХОДИТЬ В НАШ МОД, А ПОТОМ ЗАГРУЖАТЬ СОХРАНЕНИЯ, БЕЗ ЭТОГО КАРТА РАБОТАТЬ НЕ БУДЕТ!",
                          image_url="images/page3.jpg"), 200
+
 @app.route('/guide')
 def guide():
     return render_template('guide.html',
