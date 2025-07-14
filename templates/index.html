@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/index.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="background-blur index-bg"></div>
+    
+    <section class="team-summary">
+        <h1 class="team-title">Команда разработчиков</h1>
+        <p class="team-description">
+            Мы - небольшая группа энтузиастов, создающих постапокалиптический мир, 
+            вдохновленный классиками жанра. Наш проект - это смесь ностальгии и 
+            современных идей.
+        </p>
+    </section>
+    
+    <div class="game-blocks">
+        <div class="game-block legacy-block" onclick="window.location.href='/legacy'">
+            <h3>Legacy</h3>
+            <p>Оригинальная версия с зимней атмосферой</p>
+        </div>
+        <div class="game-block second-block" onclick="window.location.href='/second'">
+            <h3>Second</h3>
+            <p>Продолжение с металлической эстетикой</p>
+        </div>
+        <div class="game-block remastered-block" onclick="window.location.href='/remastered'">
+            <h3>Remastered</h3>
+            <p>Обновленная версия с осенними тонами</p>
+        </div>
+    </div>
+    
+    <div class="empty-block"></div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        // Анимация блоков
+        document.querySelectorAll('.game-block').forEach(block => {
+            block.addEventListener('mouseenter', () => {
+                block.style.transform = 'scale(1.05) rotate(1deg)';
+                block.style.boxShadow = '0 0 15px rgba(0,0,0,0.3)';
+            });
+            block.addEventListener('mouseleave', () => {
+                block.style.transform = 'scale(1) rotate(0)';
+                block.style.boxShadow = 'none';
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,80 @@
+.content-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.screenshots-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.screenshot-placeholder {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(168, 168, 168, 0.3);
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.screenshot-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(192, 192, 192, 0.1),
+        rgba(96, 96, 96, 0.3)
+    );
+    z-index: 1;
+}
+
+.screenshot-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    filter: grayscale(30%) contrast(1.1);
+}
+
+.screenshot-placeholder:hover img {
+    transform: scale(1.05);
+    filter: grayscale(10%) contrast(1.2);
+}
+
+.text-content {
+    flex: 1;
+    background-color: rgba(192, 192, 192, 0.8);
+    padding: 20px;
+    color: #222;
+    border: 1px solid rgba(168, 168, 168, 0.5);
+}
+
+.text-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.text-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #555;
+}
+
+/* Металлические акценты */
+.screenshot-placeholder, .text-content {
+    box-shadow: 0 0 10px rgba(96, 96, 96, 0.2);
+    border-left: 3px solid rgba(168, 168, 168, 0.5);
+}

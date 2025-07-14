@@ -1,0 +1,48 @@
+.site-footer {
+    background-color: rgba(20, 20, 20, 0.9);
+    color: #aaa;
+    padding: 30px 0;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-link {
+    color: #aaa;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #fff;
+}
+
+.footer-link i {
+    font-size: 1.2rem;
+}
+
+.steam-page {
+    padding: 5px 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0;
+}
+
+.steam-page:hover {
+    border-color: rgba(255,255,255,0.3);
+}
