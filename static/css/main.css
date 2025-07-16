@@ -28,9 +28,9 @@ body {
     z-index: -1;
 }
 
-.index-bg { background-image: url('../img/backgrounds/index-bg.jpg'); }
-.legacy-bg { background-image: url('../img/backgrounds/legacy-bg.jpg'); }
-.remastered-bg { background-image: url('../img/backgrounds/remastered-bg.jpg'); }
+.index-bg { background-image: url('/static/img/backgrounds/main-bg.jpg'); }
+.legacy-bg { background-image: url('/static/img/backgrounds/legacy-bg.jpg'); }
+.remastered-bg { background-image: url('/static/img/backgrounds/remastered-bg.png'); }
 .second-bg { background-image: url('../img/backgrounds/second-bg.jpg'); }
 
 /* Общие стили для текста */
