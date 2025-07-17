@@ -31,7 +31,7 @@ body {
 .index-bg { background-image: url('/static/img/backgrounds/main-bg.jpg'); }
 .legacy-bg { background-image: url('/static/img/backgrounds/legacy-bg.jpg'); }
 .remastered-bg { background-image: url('/static/img/backgrounds/remastered-bg.png'); }
-.second-bg { background-image: url('../img/backgrounds/second-bg.jpg'); }
+.second-bg { background-image: url('/static/img/backgrounds/second-bg.jpg'); }
 
 /* Общие стили для текста */
 h1, h2, h3 {
